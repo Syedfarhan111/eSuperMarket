@@ -1,15 +1,15 @@
-export const productReducer = (state = { product: ["Puma Shoes"] }, action) => {
+export const productReducer = (state = { product: ["Nike Shoes"] }, action) => {
   if (action.type === "ADD_PRODUCT") {
     return {
       ...state,
-      product: [...action.data, ...state.product],
+      product: [...action.data],
     };
   }
   if (action.type === "REMOVE_PRODUCT") {
-    // const newData = state.product.filter((item) => item !== action.data);
-    state.product.pop();
+    const newData = state.product.filter((item) => item !== action.data);
     return {
-      product: [...state.product],
+      ...state,
+      product: newData,
     };
   }
   return state;

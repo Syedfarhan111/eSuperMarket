@@ -1,22 +1,22 @@
-import React,{useEffect} from "react";
-import "./Product.css";
-import { ProductList } from "./ProductList";
-import { TopNav } from "./TopNav";
-import { getProducts } from "../service/products";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { ProductList } from "./ProductList";
+import { getProducts } from "../service/products";
+import { TopNav } from "./TopNav";
+import "./Product.css";
 
 export const Home = () => {
   const dispatch = useDispatch();
-  const allproduct = async () => {
+  const allProducts = async () => {
     const products = await getProducts();
     dispatch({
-      type: "ADD_PRODUCTS",
+      type: "ADD_PRODUCT",
       data: products,
     });
   };
 
   useEffect(() => {
-    allproduct();
+    allProducts();
   }, []);
   return (
     <div>

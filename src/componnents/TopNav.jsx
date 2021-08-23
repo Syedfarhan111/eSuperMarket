@@ -1,19 +1,18 @@
 import React from "react";
-import { Row, Col, Card } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import { Row, Col, Card } from "react-bootstrap";
 
 export const TopNav = () => {
-  const Products = useSelector((state) => state.productReducer.product);
-  console.log(Products);
+  const products = useSelector((state) => state.productReducer.product);
+  console.log(products);
   return (
-    <Card className="TopNav">
+    <Card className="topnav">
       <Row>
         <Col md={10}></Col>
         <Col md={2}>
-          <h3>Card:{Products.length}</h3>
+          <h3>Cart: {products.length}</h3>
         </Col>
       </Row>
     </Card>
   );
 };
-                                            

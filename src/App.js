@@ -1,12 +1,11 @@
-import { Home } from "./componnents/Home";
-import { Provider, useDispatch } from "react-redux";
+import React from "react";
+import { Provider } from "react-redux";
 import { configStore } from "./state/store/configStore";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { configStore} from "./state/store/configStore"
+import { Home } from "./componnents/Home";
 
 function App() {
   const localStore = configStore();
-
   return (
     <div>
       <Provider store={localStore}>
@@ -15,4 +14,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
