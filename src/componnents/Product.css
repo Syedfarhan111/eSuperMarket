@@ -1,16 +1,18 @@
-.productitem{
+.productitem {
     background-color: aquamarine !important;
     margin: 5px;
     padding: 5px;
-  
+
 }
-.productlist{
+
+.productlist {
     background-color: brown !important;
     margin: 10px;
     padding: 10px;
 }
-.topnav{
-    background-color:orange !important;
+
+.topnav {
+    background-color: orange !important;
     margin: 5px;
     padding: 5px;
 }

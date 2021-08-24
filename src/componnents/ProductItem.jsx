@@ -8,13 +8,13 @@ export const ProductItem = ({ item }) => {
   return (
     <Card className="productitem">
       <Row>
+        <Image src={`${item.image}`} width="100px" height="300px" />
+      </Row>
+      <Row>
         <Form.Label>{item.title}</Form.Label>
       </Row>
       <Row>
         <Form.Label>${item.price}</Form.Label>
-      </Row>
-      <Row>
-        <Image src={`${item.image}`} width="100px" height="300px" />
       </Row>
       <Row>
         <Col>
