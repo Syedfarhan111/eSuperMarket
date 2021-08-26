@@ -5,7 +5,7 @@ import { Row, Col, Card, Form } from "react-bootstrap";
 export const TopNav = ({ setSearchTxt }) => {
   const products = useSelector((state) => state.productReducer.product);
   console.log("TopNav========>", products);
-  // useEffect(() => {
+  // useEffect(() =>{
   //   console.log("SearcgTxt------->", searchTxt);
   // }, [searchTxt]);
   return (
